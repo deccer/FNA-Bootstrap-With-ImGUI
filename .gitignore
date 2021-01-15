@@ -348,3 +348,24 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# Rider
+.idea/
+
+# FNA libs
+!external/fnalibs/**/*.*
+
+# MkDocs
+site/
+
+# Project build output
+build/
+
+# Generated Versioning
+src/UOStudio.Core/CompilationDate.g.cs
+
+# UOStudio.Web db
+src/UOStudio.Web/uostudio.db
+
+# Publish build output
+dist/

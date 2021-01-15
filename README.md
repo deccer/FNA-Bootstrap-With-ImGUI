@@ -1,2 +1,4 @@
 # FNA-Bootstrap-With-ImGUI
-Bootstrap FNA based projects quickly. Also comes with ImGUI.NET
+Quickly bootstrap FNA based projects. Also comes with ImGUI.NET
+
+![fna-bootstrap](assets/screenshots/fna-bootstrap.png)
