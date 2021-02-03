@@ -37,9 +37,9 @@ namespace Client
         {
             _logger = logger;
 
-            FNALoggerEXT.LogError = message => _logger.Error($"FNA: {message}");
-            FNALoggerEXT.LogInfo = message => _logger.Information($"FNA: {message}");
-            FNALoggerEXT.LogWarn = message => _logger.Warning($"FNA: {message}");
+            FNALoggerEXT.LogError = message => _logger.Error("FNA: {@Message}", message);
+            FNALoggerEXT.LogInfo = message => _logger.Information("FNA: {@Message}", message);
+            FNALoggerEXT.LogWarn = message => _logger.Warning("FNA: {@Message}", message);
 
             Window.Title = "FNA-Bootstrap";
             Window.AllowUserResizing = true;
@@ -80,16 +80,6 @@ namespace Client
             _imGuiRenderer.RebuildFontAtlas();
             base.Initialize();
             _logger.Information("Initializing...Done");
-        }
-
-        private float Sum(int[] samples)
-        {
-            float RetVal = 0f;
-            for (int i = 0; i < samples.Length; i++)
-            {
-                RetVal += samples[i];
-            }
-            return RetVal;
         }
 
         protected override void Draw(GameTime gameTime)
@@ -254,6 +244,16 @@ namespace Client
             var vertexBuffer = new VertexBuffer(GraphicsDevice, typeof(VertexPositionColor), _vertices.Count, BufferUsage.WriteOnly);
             vertexBuffer.SetData(_vertices.ToArray());
             return vertexBuffer;
+        }
+
+        private static float Sum(int[] samples)
+        {
+            var result = 0f;
+            for (int i = 0; i < samples.Length; i++)
+            {
+                result += samples[i];
+            }
+            return result;
         }
     }
 }
