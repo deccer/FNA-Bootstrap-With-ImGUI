@@ -50,12 +50,12 @@
     </ItemGroup>
 
     <ItemGroup>
-        <None Include="$(ProjectDir)..\..\external\fnalibs\32bit\**\*.*" Condition=" '$(RuntimeIdentifier)' == 'win-x86' or ('$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' and '$(Prefer32Bit)' == 'true') ">
+        <None Include="$(ProjectDir)..\..\external\fnalibs\x86\**\*.*" Condition=" '$(RuntimeIdentifier)' == 'win-x86' or ('$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' and '$(Prefer32Bit)' == 'true') ">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
             <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
             <InProject>false</InProject>
         </None>
-        <None Include="$(ProjectDir)..\..\external\fnalibs\64bit\**\*.*" Condition=" '$(RuntimeIdentifier)' == 'win-x64' or ('$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' and '$(Prefer32Bit)' == 'false') ">
+        <None Include="$(ProjectDir)..\..\external\fnalibs\x64\**\*.*" Condition=" '$(RuntimeIdentifier)' == 'win-x64' or ('$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' and '$(Prefer32Bit)' == 'false') ">
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
             <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
             <InProject>false</InProject>
